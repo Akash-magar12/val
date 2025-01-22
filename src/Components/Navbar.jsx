@@ -30,9 +30,12 @@ const Navbar = () => {
         >
           Weapons
         </NavLink>
-        {/* <NavLink className="head text-2xl tracking-wide cursor-pointer">
-          About
-        </NavLink> */}
+        <NavLink
+          to="/bundle"
+          className="head text-2xl tracking-wide cursor-pointer"
+        >
+          Bundles
+        </NavLink>
         <span className="head text-2xl md:hidden">
           <CgMenuRightAlt />
         </span>

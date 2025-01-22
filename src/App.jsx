@@ -5,6 +5,7 @@ import Weapon from "./Pages/Weapon";
 import AgentDetail from "./Pages/AgentDetail";
 import Maps from "./Pages/Maps";
 import Home from "./Pages/Home";
+import Bundles from "./Pages/Bundles";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -18,6 +19,7 @@ const App = () => {
         { path: "/weapon", element: <Weapon /> },
         { path: "/maps", element: <Maps /> },
         { path: "/agent/:id", element: <AgentDetail /> },
+        { path: "/bundle", element: <Bundles /> },
       ],
     },
   ]);
