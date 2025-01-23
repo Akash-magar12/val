@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Loader from "../utils/Loader";
 import useFetch from "../utils/useFetch";
 
@@ -29,7 +30,8 @@ const Agent = () => {
       {playableAgents.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
           {playableAgents.map((val) => (
-            <div
+            <Link
+              to={`/agent/${val.uuid}`}
               key={val.uuid}
               className="group cursor-pointer relative bg-zinc-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
             >
@@ -46,7 +48,7 @@ const Agent = () => {
                   {val.role.displayName}
                 </h2>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       ) : (

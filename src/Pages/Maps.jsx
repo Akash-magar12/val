@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Loader from "../utils/Loader";
 import useFetch from "../utils/useFetch";
 
@@ -25,7 +26,8 @@ const Map = () => {
       {data && data.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
           {data.map((map) => (
-            <div
+            <Link
+              to={`/maps/${map.uuid}`}
               key={map.uuid}
               className="group cursor-pointer relative  rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
             >
@@ -38,9 +40,8 @@ const Map = () => {
                 <h1 className="text-2xl head font-bold text-white">
                   {map.displayName}
                 </h1>
-                <h2 className="head text-xl">{map.tacticalDescription}</h2>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       ) : (
