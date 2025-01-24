@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex relative items-center justify-between px-2 md:px-8">
+      <nav className="flex relative items-center justify-between  px-2 md:px-8">
         <img className="w-10 md:w-16" src={logo} alt="" />
         <ul className="flex gap-10 items-center">
           <NavLink
