@@ -9,6 +9,7 @@ import Bundles from "./Pages/Bundles";
 import MapDetails from "./Pages/MapDetails";
 import BundleDetail from "./Pages/BundleDetail";
 import WeaponDetails from "./Pages/WeaponDetails";
+import SkinDetails from "./Pages/SkinDetails";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -27,6 +28,7 @@ const App = () => {
         { path: "/maps/:id", element: <MapDetails /> },
         { path: "/bundle/:id", element: <BundleDetail /> },
         { path: "/weapon/:id", element: <WeaponDetails /> },
+        { path: "/weaponSkin/:id", element: <SkinDetails /> },
       ],
     },
   ]);
